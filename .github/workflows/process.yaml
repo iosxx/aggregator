@@ -9,11 +9,14 @@ env:
   # time zone
   TZ: Asia/Shanghai
 
-  # network proxy aggregate config
-  SUBSCRIBE_CONF: ${{ secrets.SUBSCRIBE_CONF }}
+  # github access token
+  GIST_PAT: ${{ secrets.GIST_PAT }}
+  
+  # github username and gist id
+  GIST_LINK: ${{ secrets.GIST_LINK }}
 
-  # token
-  PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+  # token (use GIST_PAT)
+  PUSH_TOKEN: ${{ secrets.GIST_PAT }}
 
   # network reachable
   REACHABLE: ${{ vars.REACHABLE }}
@@ -50,8 +53,18 @@ jobs:
       - name: Install
         run: pip3 install -r requirements.txt
 
+      - name: Update config with GIST_LINK
+        run: |
+          # 从 GIST_LINK 解析 username 和 gist id
+          USERNAME=$(echo "$GIST_LINK" | cut -d'/' -f1)
+          GISTID=$(echo "$GIST_LINK" | cut -d'/' -f2)
+          # 替换配置文件中的占位符
+          sed -i "s/REPLACE_WITH_YOUR_GIST_ID/$GISTID/g" subscribe/config/config.json
+          sed -i "s/\"username\": \"iosxx\"/\"username\": \"$USERNAME\"/g" subscribe/config/config.json
+          echo "Config updated: username=$USERNAME, gistid=$GISTID"
+
       - name: Process
-        run: python -u subscribe/process.py --overwrite
+        run: python -u subscribe/process.py -s subscribe/config/config.json --overwrite
 
       - name: Timestamp
         run: date

@@ -1,0 +1,74 @@
+{
+    "domains": [],
+    "crawl": {
+        "enable": true,
+        "threshold": 10,
+        "singlelink": true,
+        "persist": {
+            "subs": "crawledsubs",
+            "proxies": "crawledproxies"
+        },
+        "telegram": {
+            "enable": false
+        },
+        "pages": [
+            {
+                "enable": true,
+                "url": "https://oneclash.cc/",
+                "push_to": ["free"]
+            },
+            {
+                "enable": true,
+                "url": "https://oneclash.cc/t/订阅地址",
+                "push_to": ["free"]
+            }
+        ],
+        "github": {
+            "enable": false
+        },
+        "google": {
+            "enable": false
+        }
+    },
+    "groups": {
+        "free": {
+            "emoji": true,
+            "list": true,
+            "targets": {
+                "clash": "free-clash",
+                "v2ray": "free-v2ray",
+                "singbox": "free-singbox"
+            }
+        }
+    },
+    "storage": {
+        "engine": "gist",
+        "items": {
+            "free-clash": {
+                "username": "iosxx",
+                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "filename": "clash.yaml"
+            },
+            "free-v2ray": {
+                "username": "iosxx",
+                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "filename": "v2ray.txt"
+            },
+            "free-singbox": {
+                "username": "iosxx",
+                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "filename": "singbox.json"
+            },
+            "crawledsubs": {
+                "username": "iosxx",
+                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "filename": "subs.txt"
+            },
+            "crawledproxies": {
+                "username": "iosxx",
+                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "filename": "proxies.txt"
+            }
+        }
+    }
+}

@@ -21,6 +21,11 @@
                 "enable": true,
                 "url": "https://oneclash.cc/t/订阅地址",
                 "push_to": ["free"]
+            },
+            {
+                "enable": true,
+                "url": "https://clashgithub.com/",
+                "push_to": ["free"]
             }
         ],
         "github": {

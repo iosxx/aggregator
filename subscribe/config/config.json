@@ -46,27 +46,27 @@
         "items": {
             "free-clash": {
                 "username": "iosxx",
-                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "gistid": "8a94ccd08c28e1d4126539f738195bb5",
                 "filename": "clash.yaml"
             },
             "free-v2ray": {
                 "username": "iosxx",
-                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "gistid": "8a94ccd08c28e1d4126539f738195bb5",
                 "filename": "v2ray.txt"
             },
             "free-singbox": {
                 "username": "iosxx",
-                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "gistid": "8a94ccd08c28e1d4126539f738195bb5",
                 "filename": "singbox.json"
             },
             "crawledsubs": {
                 "username": "iosxx",
-                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "gistid": "8a94ccd08c28e1d4126539f738195bb5",
                 "filename": "subs.txt"
             },
             "crawledproxies": {
                 "username": "iosxx",
-                "gistid": "REPLACE_WITH_YOUR_GIST_ID",
+                "gistid": "8a94ccd08c28e1d4126539f738195bb5",
                 "filename": "proxies.txt"
             }
         }
